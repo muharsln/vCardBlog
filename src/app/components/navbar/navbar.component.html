@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <ul class="navbar-list">
+        <li class="navbar-item">
+            <a class="navbar-link" [ngClass]="{'active': activeTab === 'about'}" (click)="setActiveTab('about')" routerLink='/'>About</a>
+        </li>
+
+        <li class="navbar-item">
+            <a class="navbar-link" [ngClass]="{'active': activeTab === 'resume'}" (click)="setActiveTab('resume')" routerLink='/resume'>Resume</a>
+        </li>
+
+        <li class="navbar-item">
+            <a class="navbar-link" [ngClass]="{'active': activeTab === 'portfolio'}" (click)="setActiveTab('portfolio')" routerLink='/portfolio'>Portfolio</a>
+        </li>
+
+        <li class="navbar-item">
+            <a class="navbar-link" [ngClass]="{'active': activeTab === 'blog'}" (click)="setActiveTab('blog')" routerLink='/blog'>Blog</a>
+        </li>
+
+        <li class="navbar-item">
+            <a class="navbar-link" [ngClass]="{'active': activeTab === 'contact'}" (click)="setActiveTab('contact')" routerLink='/contact'>Contact</a>
+        </li>
+    </ul>
+</nav>

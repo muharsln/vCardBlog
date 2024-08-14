@@ -1,0 +1,33 @@
+# Node.js bağımlılıkları
+node_modules
+
+# Çıktı dizinleri
+dist/
+build/
+
+# IDE ve editör dosyaları
+.idea/
+.vscode/
+*.swp
+*.suo
+*.user
+
+# Git ve diğer kaynak kontrol dosyaları
+.git/
+.gitignore
+
+# Diğer geçici dosyalar
+*.log
+*.tmp
+*.env
+
+# Docker dosyaları
+Dockerfile
+docker-compose.yml
+
+# Proje dokümantasyon dosyaları
+README.md
+*.md
+
+# Diğer
+*.DS_Store
