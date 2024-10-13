@@ -7,11 +7,11 @@ import { Testimonial } from '../entities/testimonial';
   providedIn: 'root'
 })
 export class TestimonialsService {
-  private dataUrl = 'assets/data/testimonials.json';
+  private apiUrl = 'assets/data/testimonials.json';
 
   constructor(private http: HttpClient) { }
 
   getTestimonials(): Observable<Testimonial[]> {
-    return this.http.get<Testimonial[]>(this.dataUrl);
+    return this.http.get<Testimonial[]>(this.apiUrl);
   }
 }

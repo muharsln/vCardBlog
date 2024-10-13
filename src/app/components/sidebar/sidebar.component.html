@@ -1,109 +1,79 @@
 <aside class="sidebar" [ngClass]="{'active':isActive}">
-
-    <div class="sidebar-info">
-
+    <div class="sidebar-info" itemscope itemtype="http://schema.org/Person">
         <figure class="avatar-box">
-            <img src="./assets/images/my-avatar.png" alt="Muhammed Arslan" width="80">
+            <img class="avatar-box" src="./assets/images/logo.png" alt="Muhammed Arslan - Yazılım Geliştirici" width="80">
         </figure>
 
         <div class="info-content">
-            <h1 class="name" title="Muhammed Arslan">Muhammed Arslan</h1>
-
-            <p class="title">Software Developer</p>
+            <h2 class="name" title="Muhammed Arslan" itemprop="name">Muhammed Arslan</h2>
+            <p class="title" itemprop="jobTitle">Software Developer</p>
         </div>
 
-        <button class="info_more-btn" (click)="activate()">
-            <span>Show Contacts</span> <!--Burası çalışmıyor ve bakılacak-->
+        <button class="info_more-btn" (click)="activate()" title="İletişim bilgilerini göster">
+            <span>İletişim Bilgilerimi Göster</span>
             <i class="bi bi-chevron-down"></i>
         </button>
-
     </div>
 
     <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
             <li class="contact-item">
-
                 <div class="icon-box">
                     <i class="bi bi-envelope"></i>
                 </div>
-
                 <div class="contact-info">
                     <p class="contact-title">Email</p>
-
-                    <a href="mailto:hello@muhammedarslan.net" class="contact-link">hello&#64;muhammedarslan.net</a>
+                    <a href="mailto:hello@muhammedarslan.net" class="contact-link" title="Bana e-posta gönder">hello&#64;muhammedarslan.net</a>
                 </div>
-
             </li>
-
             <li class="contact-item">
-
                 <div class="icon-box">
                     <i class="bi bi-calendar3"></i>
                 </div>
-
                 <div class="contact-info">
                     <p class="contact-title">Birthday</p>
-
-                    <time datetime="2000-10-30">Oct 30, 2000</time>
+                    <time datetime="2000-10-30" itemprop="birthDate" content="2000-10-30">Oct 30, 2000</time>
                 </div>
-
             </li>
-
             <li class="contact-item">
-
                 <div class="icon-box">
                     <i class="bi bi-geo-alt"></i>
                 </div>
-
                 <div class="contact-info">
                     <p class="contact-title">Location</p>
-
-                    <address>Sanliurfa, TURKEY</address>
+                    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="addressLocality">Sanliurfa, Turkey</span>
+                    </address>
                 </div>
-
             </li>
-
             <li class="contact-item">
-
                 <div class="icon-box">
                     <i class="bi bi-file-earmark-person-fill"></i>
                 </div>
-
                 <div class="contact-info">
                     <p class="contact-title">CV</p>
-
-                    <a href="http://muhammedarslan.net/cv" class="contact-link">Click to download</a>
+                    <a href="http://muhammedarslan.net/cv" class="contact-link" title="CV'yi indirmek için tıklayın">Click to download</a>
                 </div>
-
             </li>
         </ul>
-
         <div class="separator"></div>
-
         <ul class="social-list">
-
             <li class="social-item">
-                <a href="https://www.linkedin.com/in/muharsln/" class="social-link">
+                <a href="https://www.linkedin.com/in/muharsln/" class="social-link" title="Muhammed Arslan'ın LinkedIn Profili">
                     <i class="bi bi-linkedin"></i>
                 </a>
             </li>
-
             <li class="social-item">
-                <a href="https://github.com/muharsln" class="social-link">
+                <a href="https://github.com/muharsln" class="social-link" title="Muhammed Arslan'ın GitHub Profili">
                     <i class="bi bi-github"></i>
                 </a>
             </li>
-
             <li class="social-item">
-                <a href="https://medium.com/@muharsln" class="social-link">
+                <a href="https://medium.com/@muharsln" class="social-link" title="Muhammed Arslan'ın Medium Yazıları">
                     <i class="bi bi-medium"></i>
                 </a>
             </li>
-
         </ul>
     </div>
 </aside>
