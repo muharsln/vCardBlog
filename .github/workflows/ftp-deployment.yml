@@ -24,7 +24,7 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Copy additional files (sitemap.xml, robots.txt)
+    - name: Copy additional files (sitemap.xml, robots.txt, .htaccess)
       run: |
         mkdir -p build/output # Build çıktısının ve ek dosyaların olduğu klasörü oluştur
         cp -R dist/v-card-blog/browser/* build/output/ # Build klasöründeki tüm dosyaları output klasörüne kopyala
@@ -33,7 +33,7 @@ jobs:
         cp .htaccess build/output/  # .htaccess dosyasını da ekleyebilirsin (varsa)
 
     - name: Deploy Files to FTP Server
-      uses: SamKirkland/FTP-Deploy-Action@4.5.0
+      uses: SamKirkland/FTP-Deploy-Action@latest
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
