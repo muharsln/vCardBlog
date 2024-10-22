@@ -5,83 +5,24 @@
     </header>
 
     <section class="projects">
-
-        <ul class="filter-list">
-
-            <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-                <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-                <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-                <button data-filter-btn>Web development</button>
-            </li>
-
-        </ul>
-
-        <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-                <div class="select-value" data-selecct-value>Select category</div>
-
-                <div class="select-icon">
-                    <i class="bi bi-chevron-down"></i>
-                </div>
-
-            </button>
-
-            <ul class="select-list">
-
-                <li class="select-item">
-                    <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                    <button data-select-item>Web design</button>
-                </li>
-
-                <li class="select-item">
-                    <button data-select-item>Applications</button>
-                </li>
-
-                <li class="select-item">
-                    <button data-select-item>Web development</button>
-                </li>
-
-            </ul>
-
-        </div>
-
         <ul class="project-list">
 
             <li *ngFor="let repo of repositories" class="project-item  active">
-                <a [href]="repo.url">
+                <a target="_blank" [href]="repo.url">
 
                     <figure class="project-img">
                         <div class="project-item-icon-box">
                             <i class="bi bi-eye"></i>
                         </div>
 
-                        <img src="https://github.blog/wp-content/uploads/2023/01/1200x640-2.png" alt="finance" loading="lazy">
+                        <img src="./assets/images/github-logo.webp" alt="Yazılım Projelerim" loading="lazy">
                     </figure>
 
                     <h3 class="project-title">{{repo.name}}</h3>
-
-                    <p class="project-category">Web development</p>
-
                 </a>
             </li>
-
+            
         </ul>
-
     </section>
 
 </article>

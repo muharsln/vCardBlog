@@ -7,11 +7,15 @@ import { CvData } from '../entities/cv-data';
   providedIn: 'root'
 })
 export class CvDataService {
-  private apiUrl = 'assets/data/cv-data.json';
+  private apiUrlEn = 'assets/data/cv-data-en.json';
+  private apiUrlTr = 'assets/data/cv-data-tr.json';
 
   constructor(private http: HttpClient) { }
 
-  getCvDatas(): Observable<CvData[]> {
-    return this.http.get<CvData[]>(this.apiUrl);
+  getCvDatasEn(): Observable<CvData> {
+    return this.http.get<CvData>(this.apiUrlEn);
+  }
+  getCvDatasTr(): Observable<CvData> {
+    return this.http.get<CvData>(this.apiUrlTr);
   }
 }

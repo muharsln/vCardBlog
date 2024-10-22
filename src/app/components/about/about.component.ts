@@ -1,24 +1,33 @@
 import { CommonModule } from '@angular/common';
-import {} from '@angular/common/http';
+import { } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent implements OnInit{
+export class AboutComponent implements OnInit {
 
   skills: string[] = [
-    "C#","Angular","Docker","MsSql","TypeScript","Jenkins","Onion Architecture","Clean Code","CQRS Pattern","OOP"
+    "C#", "Angular", "Docker", 
+    "MsSql", "TypeScript", "Jenkins", 
+    "Onion Architecture", "Clean Code", 
+    "CQRS Pattern", "OOP"
   ];
-  constructor(private titleService:Title){}
+  
+  constructor(
+    private titleService: Title,
+    private translate: TranslateService) { }
 
   ngOnInit() {
-    this.titleService.setTitle("Muhammed Arslan | About");
+    this.translate.get("ABOUT").subscribe((translation: string) => {
+      this.titleService.setTitle(`Muhammed Arslan | ${translation}`);
+    });
   }
 
 }

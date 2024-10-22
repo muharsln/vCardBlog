@@ -1,0 +1,16 @@
+# Tüm arama motorlarına izin ver
+User-agent: *
+Disallow: /admin/        # Yönetici alanına erişimi engelle
+Disallow: /private/      # Özel verilere erişimi engelle
+Disallow: /temp/         # Geçici dosyaların erişimini engelle
+Disallow: /api/          # API uç noktalarına erişimi engelle
+
+# Belirli bir arama motoruna özel kurallar
+User-agent: Googlebot
+Allow: /public/          # Googlebot'a halka açık sayfaları taramasına izin ver
+
+User-agent: Bingbot
+Disallow: /staging/      # Bingbot'a staging alanına erişimi engelle
+
+# Site haritasının konumu
+Sitemap: https://muhammedarslan.net/sitemap.xml

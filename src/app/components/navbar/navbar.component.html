@@ -1,23 +1,19 @@
 <nav class="navbar">
     <ul class="navbar-list">
         <li class="navbar-item">
-            <a class="navbar-link" routerLink='/' routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >About</a>
+            <a class="navbar-link" routerLink='/' routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >{{"ABOUT"|translate}}</a>
         </li>
 
         <li class="navbar-item">
-            <a class="navbar-link" routerLink='/resume' routerLinkActive="active">Resume</a>
+            <a class="navbar-link" routerLink='/resume' routerLinkActive="active">{{"RESUME"|translate}}</a>
         </li>
 
         <li class="navbar-item">
-            <a class="navbar-link" routerLink='/portfolio' routerLinkActive="active">Portfolio</a>
+            <a class="navbar-link" routerLink='/portfolio' routerLinkActive="active">{{"PORTFOLIO"|translate}}</a>
         </li>
 
         <li class="navbar-item">
-            <a class="navbar-link" routerLink='/blog' routerLinkActive="active">Blog</a>
+            <a class="navbar-link" routerLink='/blog' routerLinkActive="active">{{"BLOG"|translate}}</a>
         </li>
-
-        <!-- <li class="navbar-item">
-            <a class="navbar-link" routerLink='/contact' routerLinkActive="active">Contact</a>
-        </li> -->
     </ul>
 </nav>

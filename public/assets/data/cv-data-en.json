@@ -1,0 +1,25 @@
+{
+    "experience": [
+        {
+            "title": "Software Developer",
+            "date": "11/2022 - Present",
+            "description": [
+                "To manage the operational processes of 100,000 donors, I am developing systems using .Net Core and Angular. The systems I developed saved 80% of the time and reduced error rates to 5%.",
+                "By analyzing the various needs and requirements of the organization in detail, I create flow diagrams and system plans using Lucidchart in close cooperation with other departments. I manage the development and implementation of projects by planning the most appropriate solutions.",
+                "I established a software development team to increase the development speed and efficiency of the projects. Together with this team, we manage the processes of the projects more successfully by using Kanban methodology and Trello, division of labor and teamwork."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "departmant": "Management Information Systems (Bachelor's Degree)",
+            "school": "Anadolu University",
+            "gpa": "3.00 / 4.00"
+        },
+        {
+            "departmant": "Computer Programming (Associate's Degree)",
+            "school": "Adiyaman University",
+            "gpa": "3.75 / 4.00"
+        }
+    ]
+}

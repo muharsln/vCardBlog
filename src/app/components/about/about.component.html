@@ -1,23 +1,17 @@
 <article class="about">
 
     <header>
-        <h2 class="h2 article-title">About me</h2>
+        <h2 class="h2 article-title"> {{"ABOUT"|translate}}</h2>
     </header>
 
     <section class="about-text">
-        <p>
-            Tutkulu bir yazılım geliştirici olarak, C# ile <b>yedi</b> yılı aşkın çalışma deneyimiyle yazılım geliştirme
-            alanında sağlam bir temel oluşturdum. <b>ASP.NET Core</b> kullanarak, <b>Entity Framework, Onion
-                Architecture, CQRS</b> ve Mediator kalıpları gibi yapıları kullanarak RESTful web API'leri
-            geliştirme konusunda deneyime sahibim. <b>Docker</b> kullanarak konteynerleştirme ve sunucu
-            dağıtımı konusunda bilgiliyim.
-        </p>
+        <p [innerHTML]="'ABOUT TEXT' | translate"></p>
     </section>
 
     <!-- service -->
     <section class="service">
 
-        <h3 class="h3 service-title">What I'm doing</h3>
+        <h3 class="h3 service-title">{{"WHAT I'M DOING" | translate}}</h3>
 
         <ul class="service-list">
 
@@ -28,11 +22,9 @@
                 </div>
 
                 <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Backend Development</h4>
+                    <h4 class="h4 service-item-title">{{"BACKEND"|translate}}</h4>
 
-                    <p class="service-item-text">
-                        The most modern and high-quality design made at a professional level.
-                    </p>
+                    <p class="service-item-text">{{"BACKEND TEXT"|translate}}</p>
                 </div>
 
             </li>
@@ -44,11 +36,9 @@
                 </div>
 
                 <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Frontend Development</h4>
+                    <h4 class="h4 service-item-title">{{"FRONTEND"|translate}}</h4>
 
-                    <p class="service-item-text">
-                        High-quality development of sites at the professional level.
-                    </p>
+                    <p class="service-item-text">{{"FRONTEND TEXT"|translate}}</p>
                 </div>
 
             </li>
@@ -59,7 +49,7 @@
 
     <!-- skill -->
     <section class="skill">
-        <h3 class="h3 skills-title">My skills</h3>
+        <h3 class="h3 skills-title">{{"MY SKILLS"|translate}}</h3>
         <div class="skills-list">
             <div *ngFor="let skill of skills" class="skills-item">
                 <h5 class="h5">{{skill}}</h5>

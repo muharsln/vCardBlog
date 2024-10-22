@@ -1,0 +1,21 @@
+{
+    "ABOUT": "About",
+    "BLOG": "Blog",
+    "PORTFOLIO": "Portfolio",
+    "RESUME": "Resume",
+    "JOB TITLE": "Software Developer",
+    "EMAIL": "Email",
+    "BIRTHDAY": "Birthday",
+    "LOCATION": "Location",
+    "ADDRESS": "Sanliurfa, Turkey",
+    "CLICK TO DOWNLOAD": "Click to download",
+    "ABOUT TEXT": "As a passionate software developer, I have a solid foundation in software development with over <b>seven</b> years of experience working with C#. I have experience developing RESTful web APIs using <b>ASP.NET Core</b>, using frameworks such as <b>Entity Framework, Onion Architecture, CQRS</b> and Mediator patterns. I am familiar with containerization and server deployment using <b>Docker</b>.",
+    "WHAT I'M DOING": "What I'm Doing",
+    "BACKEND": "Backend Development",
+    "BACKEND TEXT": "The most modern and high-quality design made at a professional level.",
+    "FRONTEND": "Frontend Development",
+    "FRONTEND TEXT": "High-quality development of sites at the professional level.",
+    "MY SKILLS": "My Skills",
+    "EXPERIENCE":"Experience",
+    "EDUCATION":"Education"
+}
