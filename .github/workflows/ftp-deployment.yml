@@ -33,7 +33,7 @@ jobs:
         cp .htaccess build/output/  # .htaccess dosyasını da ekleyebilirsin (varsa)
 
     - name: Deploy Files to FTP Server
-      uses: SamKirkland/FTP-Deploy-Action@4.3.5
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
