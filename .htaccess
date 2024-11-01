@@ -1,3 +1,11 @@
+# HTTP'den HTTPS'e yönlendirme
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 404 hatasında ana sayfaya yönlendirme
+ErrorDocument 404 /index.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -8,9 +16,5 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Yönlendirme: Bulunamadığında /about sayfasına git
-  # RewriteRule . /about [R=302,L]
-
-  # Alternatif olarak, burada index.html'ye yönlendirmeyi de ekleyebilirsiniz
   RewriteRule . /index.html [L]
 </IfModule>

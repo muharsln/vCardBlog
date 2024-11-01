@@ -1,0 +1,38 @@
+/* .not-found {
+    position: relative;
+} */
+
+.error-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.error-message {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--orange-yellow-crayola);
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.go-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.go-back:hover {
+    background-color: #2980b9;
+}

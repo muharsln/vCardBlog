@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Meta } from '@angular/platform-browser';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +13,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  constructor(private translate: TranslateService) {
+export class AppComponent implements OnInit {
+  constructor(
+    private translate: TranslateService,
+    private router: Router,
+    private metaService: Meta,
+    private renderer: Renderer2
+  ) {
     const supportedLanguages = ['en', 'tr'];
 
     // Tarayıcı dilini alırken undefined olma durumunu kontrol edin
@@ -22,6 +29,32 @@ export class AppComponent {
     // Varsayılan dili ayarla
     this.translate.setDefaultLang(defaultLang);
     this.translate.use(defaultLang);
+
+    // Tarayıcı diline göre <html> etiketinin lang özniteliğini ayarla
+    this.renderer.setAttribute(document.documentElement, 'lang', defaultLang);
+  }
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const currentRoute = this.router.routerState.snapshot.root.firstChild;
+        const canonicalURL = `https://muhammedarslan.net${this.router.url}`;
+        this.updateCanonicalURL(canonicalURL);
+
+        if (currentRoute && currentRoute.data) {
+          this.updateMetaTags(currentRoute.data);
+        }
+      });
+  }
+  // Meta etiketler içerisinde yer alan ve seo açısından önemli olan canonical'ın linkini açılan sayfaya göre günceller
+  updateCanonicalURL(url: string) {
+    this.metaService.updateTag({ rel: 'canonical', href: url }, `link[rel='canonical']`);
+  }
+
+  // Meta etiketlerinden description tagını generic olarak günceller
+  updateMetaTags(data: any) {
+    this.metaService.updateTag({ name: 'description', content: data.description });
   }
 
 }
