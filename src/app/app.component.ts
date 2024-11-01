@@ -49,7 +49,17 @@ export class AppComponent implements OnInit {
   }
   // Meta etiketler içerisinde yer alan ve seo açısından önemli olan canonical'ın linkini açılan sayfaya göre günceller
   updateCanonicalURL(url: string) {
-    this.metaService.updateTag({ rel: 'canonical', href: url }, `link[rel='canonical']`);
+    const existingCanonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (existingCanonical) {
+      // Eğer mevcut bir canonical varsa, sadece href değerini güncelle
+      existingCanonical.href = url;
+    } else {
+      // Eğer mevcut değilse, yeni bir canonical etiketi oluştur
+      const link: HTMLLinkElement = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', url);
+      document.head.appendChild(link);
+    }
   }
 
   // Meta etiketlerinden description tagını generic olarak günceller
