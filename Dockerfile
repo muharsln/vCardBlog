@@ -23,5 +23,9 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # 8. Adım: Derlenmiş uygulama dosyalarını Nginx'in kök dizinine kopyalayın
 COPY --from=build /app/dist/v-card-blog/browser /usr/share/nginx/html
 
-# 9. Adım: Nginx'in dinleyeceği portu açın
+# 9. Adım: robots.txt ve sitemap.cml dosyalarını kopyala
+COPY robots.txt /usr/share/nginx/html
+COPY sitemap.xml /usr/share/nginx/html
+
+# 10. Adım: Nginx'in dinleyeceği portu açın
 EXPOSE 7000
