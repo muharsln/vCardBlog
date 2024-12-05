@@ -24,4 +24,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/v-card-blog/browser /usr/share/nginx/html
 
 # 9. Adım: Nginx'in dinleyeceği portu açın
-EXPOSE 80
+EXPOSE 7000
