@@ -7,18 +7,18 @@
     <section class="projects">
         <ul class="project-list">
 
-            <li *ngFor="let repo of repositories" class="project-item  active">
-                <a target="_blank" [href]="repo.url">
+            <li *ngFor="let project of projects" class="project-item  active">
+                <a target="_blank" [href]="project.url">
 
                     <figure class="project-img">
                         <div class="project-item-icon-box">
                             <i class="bi bi-eye"></i>
                         </div>
 
-                        <img src="./assets/images/github-logo.webp" alt="Yazılım Projelerim" loading="lazy">
+                        <img [src]="project.imageUrl" [alt]="project.imageAlt" loading="lazy">
                     </figure>
 
-                    <h3 class="project-title">{{repo.name}}</h3>
+                    <h3 class="project-title">{{project.name}}</h3>
                 </a>
             </li>
             

@@ -122,10 +122,12 @@ textarea {
 
 html {
     font-family: var(--ff-poppins);
+    overflow-y: scroll; /* Her zaman dikey scroll bar göster */
 }
 
 body {
     background: var(--smoky-black);
+    padding-right: calc(100vw - 100%); /* Scroll bar genişliği kadar padding ekle */
 }
 
 /*-----------------------------------*\
@@ -139,6 +141,10 @@ article {
     padding: 15px;
     box-shadow: var(--shadow-1);
     z-index: 1;
+    width: 100%; /* Genişliği sabit tut */
+    max-width: 950px; /* Maximum genişlik belirle */
+    margin: 0 auto;
+    min-height: calc(100vh - 155px); /* Sidebar ile aynı yüksekliği sağla */
 }
 
 .separator {
@@ -218,7 +224,8 @@ article {
 
 .article-title {
     position: relative;
-    padding-bottom: 7px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .article-title::after {
@@ -335,7 +342,8 @@ main {
 
     .article-title {
         font-weight: var(--fw-600);
-        padding-bottom: 15px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .article-title::after {
@@ -444,7 +452,7 @@ main {
     /**   * REUSED STYLE   */
     article {
         width: auto;
-        min-height: 100%;
+        min-height: calc(100vh - 155px); /* Sidebar ile aynı yüksekliği koru */
     }
 
     /**   * MAIN   */

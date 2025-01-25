@@ -15,7 +15,12 @@
     "BACKEND TEXT": "Profesyonel düzeyde yapılmış en modern ve yüksek kaliteli tasarım.",
     "FRONTEND": "Frontend Geliştirme",
     "FRONTEND TEXT": "Profesyonel düzeyde sitelerin yüksek kalitede geliştirilmesi.",
+    "MOBILE": "Mobile Uygulama Geliştirme",
+    "MOBILE TEXT": "Profesyonel düzeyde mobil uygulamaların yüksek kalitede geliştirilmesi.",
+    "SERVER": "Server Yönetimi",
+    "SERVER TEXT": "Sitenin sorunsuz çalışmasını sağlayan yüksek kaliteli sunucu yönetimi.",
+    "REFERANCES": "Referanslar",
     "MY SKILLS": "Yeteneklerim",
-    "EXPERIENCE":"Deneyim",
-    "EDUCATION":"Eğitim"
+    "EXPERIENCE": "Deneyim",
+    "EDUCATION": "Eğitim"
 }

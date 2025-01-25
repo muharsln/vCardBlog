@@ -15,7 +15,12 @@
     "BACKEND TEXT": "The most modern and high-quality design made at a professional level.",
     "FRONTEND": "Frontend Development",
     "FRONTEND TEXT": "High-quality development of sites at the professional level.",
+    "MOBILE": "Mobile App Development",
+    "MOBILE TEXT": "High-quality development of mobile applications at the professional level.",
+    "SERVER": "Server Management",
+    "SERVER TEXT": "High-quality server management, ensuring the smooth operation of the site.",
+    "REFERANCES": "Referances",
     "MY SKILLS": "My Skills",
-    "EXPERIENCE":"Experience",
-    "EDUCATION":"Education"
+    "EXPERIENCE": "Experience",
+    "EDUCATION": "Education"
 }

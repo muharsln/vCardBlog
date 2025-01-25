@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RespositoriesService } from '../../services/respositories.service';
-import { Repository } from '../../entities/repository';
+import { Project } from '../../entities/project';
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -13,10 +12,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent implements OnInit {
-  repositories: Repository[] = [];
+  projects: Project[] = [];
 
   constructor(
-    private repositoriesService: RespositoriesService,
     private titleService: Title,
     private translate: TranslateService) { }
 
@@ -24,9 +22,16 @@ export class PortfolioComponent implements OnInit {
     this.translate.get("PORTFOLIO").subscribe((translation: string) => {
       this.titleService.setTitle(`Muhammed Arslan | ${translation}`);
     });
-    this.repositoriesService.getRepositories().subscribe(data => {
-      this.repositories = data;
-    });
+
+    this.projects = [
+      {
+        name: 'FINEASE',
+        url: 'https://finease.app',
+        imageUrl: '/assets/images/finease_logo_square.png',
+        imageAlt: 'Finease Logo'
+      }
+    ];
+
   }
 
 }

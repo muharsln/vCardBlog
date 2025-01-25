@@ -15,7 +15,6 @@ section {
 
 .project-item.active {
     display: block;
-    /* animation: scaleUp 0.25s ease forwards; */
 }
 
 @keyframes scaleUp {

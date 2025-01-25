@@ -5,15 +5,18 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Meta } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TranslateModule, RouterOutlet, SidebarComponent, NavbarComponent],
+  imports: [TranslateModule, RouterOutlet, SidebarComponent, NavbarComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  isLoading = true;
+
   constructor(
     private translate: TranslateService,
     private router: Router,
@@ -35,6 +38,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Splash screen için 2 saniyelik gecikme
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
+
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {

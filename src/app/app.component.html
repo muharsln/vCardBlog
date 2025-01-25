@@ -1,4 +1,8 @@
-<main>
+<div class="splash-screen" *ngIf="isLoading">
+  <img src="./assets/images/logo.png" alt="Logo">
+</div>
+
+<main [ngClass]="{'main-loaded': !isLoading}">
   <app-sidebar></app-sidebar>
 
   <div class="main-content">

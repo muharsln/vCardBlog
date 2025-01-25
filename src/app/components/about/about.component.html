@@ -15,7 +15,7 @@
         <ul class="service-list">
             <li class="service-item">
                 <div class="service-icon-box">
-                    <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                    <i class="fa-solid fa-code-compare"></i>
                 </div>
                 <div class="service-content-box">
                     <h3 class="h4 service-item-title">{{"BACKEND"|translate}}</h3>
@@ -24,14 +24,52 @@
             </li>
             <li class="service-item">
                 <div class="service-icon-box">
-                    <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                    <i class="fa-solid fa-code"></i>
                 </div>
                 <div class="service-content-box">
                     <h3 class="h4 service-item-title">{{"FRONTEND"|translate}}</h3>
                     <p class="service-item-text">{{"FRONTEND TEXT"|translate}}</p>
                 </div>
             </li>
+            <li class="service-item">
+                <div class="service-icon-box">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="service-content-box">
+                    <h3 class="h4 service-item-title">{{"MOBILE"|translate}}</h3>
+                    <p class="service-item-text">{{"MOBILE TEXT"|translate}}</p>
+                </div>
+            </li>
+            <li class="service-item">
+                <div class="service-icon-box">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="service-content-box">
+                    <h3 class="h4 service-item-title">{{"SERVER"|translate}}</h3>
+                    <p class="service-item-text">{{"SERVER TEXT"|translate}}</p>
+                </div>
+            </li>
         </ul>
+    </section>
+
+    <!-- testimonial -->
+    <section class="testimonials">
+        <h2 class="h3 testimonials-title">{{"REFERANCES" | translate}}</h2>
+        <div class="testimonials-container">
+            <a *ngFor="let company of companies" 
+               [href]="company.url" 
+               target="_blank" 
+               class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="company-logo">
+                        <img [src]="company.logo" [alt]="company.name">
+                    </div>
+                    <div class="company-info">
+                        <h4 class="company-name">{{company.name}}</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 
     <!-- skill -->

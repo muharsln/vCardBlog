@@ -9,8 +9,7 @@
             <p class="title" itemprop="jobTitle">{{"JOB TITLE"|translate}}</p>
         </div>
 
-        <button class="info_more-btn" (click)="activate()" title="İletişim bilgilerini göster">
-            <span>İletişim Bilgilerimi Göster</span>
+        <button class="info_more-btn" (click)="activate()" [attr.aria-expanded]="isActive" title="İletişim bilgilerini göster">
             <i class="bi bi-chevron-down"></i>
         </button>
     </div>
@@ -47,15 +46,15 @@
                     </address>
                 </div>
             </li>
-            <li class="contact-item">
+            <!-- <li class="contact-item">
                 <div class="icon-box">
                     <i class="bi bi-file-earmark-person-fill"></i>
                 </div>
                 <div class="contact-info">
                     <p class="contact-title">CV</p>
-                    <a href="http://muhammedarslan.net/cv" class="contact-link" title="CV'yi indirmek için tıklayın">{{"CLICK TO DOWNLOAD"|translate}}</a>
+                    <a href="http://muhammedarslan.net/cv.pdf" class="contact-link" title="CV'yi indirmek için tıklayın">{{"CLICK TO DOWNLOAD"|translate}}</a>
                 </div>
-            </li>
+            </li> -->
         </ul>
         <div class="separator"></div>
         <ul class="social-list">

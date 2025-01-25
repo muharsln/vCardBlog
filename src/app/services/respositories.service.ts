@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Repository } from '../entities/repository';
+import { Project } from '../entities/project';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class RespositoriesService {
 
   constructor(private http: HttpClient) { }
 
-  getRepositories(): Observable<Repository[]> {
-    return this.http.get<Repository[]>(this.apiUrl);
+  getRepositories(): Observable<Project[]> {
+    return this.http.get<Project[]>(this.apiUrl);
   }
 }
