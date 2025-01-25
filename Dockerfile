@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # 5. Adım: Uygulamayı üretim için derleyin
-RUN npm run build --prod
+RUN npm run build
 
 # 6. Adım: Nginx ile yeni bir imaj oluştur
 FROM nginx:latest
